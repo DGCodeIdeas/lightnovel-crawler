@@ -172,15 +172,11 @@ $ docker run -v ~/Lightnovels:/home/appuser/app/Lightnovels -it lncrawl
 📱 Using Termux, you can run this app in your android phones too. Follow this instructions:
 
 - Install [Termux](https://github.com/termux/termux-app/releases/) from github.
-- Open the app and run these commands one by one:
-  - `termux-change-repo && pkg upgrade -y && termux-setup-storage` run to update repo to local and setup storage
-  - `pkg upgrade -y && pkg install python-grpcio python-lxml python-pillow -y` run to setup depends
-  - `CFLAGS="-Wno-error=incompatible-function-pointer-types" pip install -U setuptools lightnovel-crawler` run to install
-  - `cd ~/storage/downloads` set storage location to downloads folder
-  - `lncrawl` run the crawler
+- Open the app and run this command:
+  - `curl -sL https://raw.githubusercontent.com/dipu-bd/lightnovel-crawler/master/scripts/termux_install.sh | bash`
 - You can navigate up using <kbd>Vol UP</kbd> + <kbd>W</kbd> and down using <kbd>Vol UP</kbd> + <kbd>S</kbd>.
 
-When there is a new update available, you can install it just by running `pip install -U lightnovel-crawler`. You will not have to run all the above commands again.
+When there is a new update available, you can update it by navigating to the `lightnovel-crawler` directory and running `git pull && pip install -r requirements.txt`.
 
 **PyDroid**
 
